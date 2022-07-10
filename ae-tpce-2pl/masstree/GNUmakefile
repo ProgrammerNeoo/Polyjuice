@@ -1,6 +1,6 @@
 AR = ar
-CC = gcc
-CXX = g++
+CC = /home/fan.cui/spack/opt/spack/linux-debian11-broadwell/gcc-10.2.1/gcc-7.5.0-4uk3aup2ssu7kxztdc5kjbxtl5cahkgn/bin/gcc
+CXX = /home/fan.cui/spack/opt/spack/linux-debian11-broadwell/gcc-10.2.1/gcc-7.5.0-4uk3aup2ssu7kxztdc5kjbxtl5cahkgn/bin/g++
 CFLAGS = -g -W -Wall -O2
 DEPSDIR := .deps
 DEPCFLAGS = -MD -MF $(DEPSDIR)/$*.d -MP
@@ -73,7 +73,7 @@ configure config.h.in: configure.ac
 	touch config.h.in
 
 config.status: configure
-	./configure  '--enable-max-key-len=1024' '--disable-assertions' '--disable-invariants' '--disable-preconditions' '--with-malloc=jemalloc'
+	./configure  '--enable-max-key-len=1024' '--disable-assertions' '--disable-invariants' '--disable-preconditions' '--with-malloc=jemalloc' 'CC=/home/fan.cui/spack/opt/spack/linux-debian11-broadwell/gcc-10.2.1/gcc-7.5.0-4uk3aup2ssu7kxztdc5kjbxtl5cahkgn/bin/gcc' 'CXX=/home/fan.cui/spack/opt/spack/linux-debian11-broadwell/gcc-10.2.1/gcc-7.5.0-4uk3aup2ssu7kxztdc5kjbxtl5cahkgn/bin/g++'
 
 $(DEPSDIR)/stamp:
 	mkdir -p $(DEPSDIR)
