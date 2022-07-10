@@ -685,7 +685,7 @@ protected:
   virtual void
   on_run_setup() OVERRIDE
   {
-    bind_thread(worker_id);
+    // bind_thread(worker_id);
     
     if (pin_cpus) {
       const size_t a = worker_id % coreid::num_cpus_online();
