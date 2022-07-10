@@ -626,7 +626,7 @@ protected:
   virtual void
   on_run_setup() OVERRIDE
   {
-    // bind_thread(worker_id);
+    bind_thread(worker_id);
     
     if (!pin_cpus)
       return;

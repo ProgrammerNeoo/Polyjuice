@@ -415,7 +415,7 @@ protected:
   virtual void
   on_run_setup() OVERRIDE
   {
-    // bind_thread(worker_id);
+    bind_thread(worker_id);
     pidx = (worker_id - coreid::num_cpus_online());
   }
 
